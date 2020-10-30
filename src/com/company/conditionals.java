@@ -37,7 +37,7 @@ public class conditionals {
 
     public String setAlarm(int x, boolean y) {
         boolean weekday = x > 0 && x <= 5;
-        boolean weekend = (x < 1 || x >= 6);
+        boolean weekend = x < 1 || x >= 6;
         if (weekday && !y)
         {
             return "7:00";
@@ -52,6 +52,7 @@ public class conditionals {
         }
 
     }
+
     public boolean onesDigitSame(int a, int b, int c){
         int first = a%10;
         int second = b%10;
@@ -64,8 +65,8 @@ public class conditionals {
         else{
             return false;
         }
-
     }
+
     public int blackjack(int x, int y){
         int first = 21 - x;
         int second = 21 - y;
@@ -75,7 +76,7 @@ public class conditionals {
         else if ((first - second >= second - first || x>21) && y<=21){
             return y;
         }
-        else{
+        else {
             return 0;
         }
     }
