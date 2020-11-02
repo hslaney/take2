@@ -10,13 +10,12 @@ public class conditionals {
     public boolean negPos(int x, int y, boolean negative) {
         boolean first = x > 0;
         boolean second = y > 0;
-        boolean value = !(first && second) && (first || second) && !negative;
 
         if (!(first || second) && negative) {
             return true;
         }
-        else if (value){
-            return value;
+        else if (first!=second && !negative){
+            return true;
         }
         else {
             return false;
@@ -27,7 +26,7 @@ public class conditionals {
         if (isAsleep){
             return false;
         }
-        else if (isMorning && !(isMorning && isMom)){
+        else if (isMorning && !isMom){
             return false;
         }
         else {
@@ -37,12 +36,12 @@ public class conditionals {
 
     public String setAlarm(int x, boolean y) {
         boolean weekday = x > 0 && x <= 5;
-        boolean weekend = x < 1 || x >= 6;
+        boolean weekend = x == 0  || x ==6;
         if (weekday && !y)
         {
             return "7:00";
         }
-        else if (weekday && y || weekend && !y)
+        else if (weekend && !y || weekday && y)
         {
             return "10:00";
         }

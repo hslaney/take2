@@ -64,7 +64,6 @@ public class Main {
 }
 
 /*
-output:
 chimp trouble
 true
 true
@@ -110,5 +109,6 @@ Blackjack
 19
 8
 0
+
 
  */
